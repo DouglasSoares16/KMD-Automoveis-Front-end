@@ -1,0 +1,41 @@
+:root {
+    --dark-color: #1B1B1F;
+    --primary-color: #800080;
+    --primary-hover: #800080c5;
+    --green-color: #03B252;
+    --background-container: #F4F5F6;
+    --background-card: #FFFFFF;
+    --button-black: #29292E;
+
+    --title: #47474D;
+    --text: #7A7A80;
+
+    --modal-overlay: #29292E;
+
+    --family-archivo: 'Archivo', sans-serif;
+    --family-inter: 'Inter', sans-serif;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+
+    font: 400 16px var(--family-inter);
+    color: var(--text);
+}
+
+.title {
+    font: 600 30px var(--family-archivo);
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
