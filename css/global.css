@@ -35,6 +35,7 @@ body {
 
 .title {
   font: 600 30px var(--family-archivo);
+  color: var(--title);
 }
 
 a {
