@@ -45,3 +45,8 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+.title-page {
+  font-weight: 600;
+  font-size: 20px;
+}
