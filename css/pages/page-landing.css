@@ -1,70 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    background-color: var(--dark-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    width: 80%;
-    height: 80%;
-    display: flex;
-    margin: 103px 160px;
-    justify-content: space-around;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  margin: 103px 160px;
+  justify-content: space-around;
 }
 
 .container main {
-    width: 430px;
+  width: 430px;
 }
 
 .container main .logo img {
-    margin-left: -80px;
+  margin-left: -80px;
 }
 
 .container main h2.title {
-    color: #ffff;
-    font-size: 54px;
-    margin-bottom: 20px;
+  color: #ffff;
+  font-size: 54px;
+  margin-bottom: 20px;
 
-    line-height: 54px;
+  line-height: 54px;
 }
 
 .container main p {
-    color: #FFFF;
-    margin-bottom: 70px;
+  color: #FFFF;
+  margin-bottom: 70px;
 
-    width: 331px;
-    height: 60px;
+  width: 331px;
+  height: 60px;
 
-    font-size: 20px;
-    line-height: 30px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .container .image {
-    text-align: right;
-    width: 608px;
+  text-align: right;
+  width: 608px;
 }
 
 .container .image img {
-    margin-top: 66px;
+  margin-top: 66px;
 }
 
 .container main .button {
-    width: 292px;
-    height: 80px;
+  width: 292px;
+  height: 80px;
 
-    background-color: var(--primary-color);
-    color: #F4F5F6;
+  background-color: var(--primary-color);
+  color: #F4F5F6;
 
-    transition: .3s;
+  transition: .3s;
 }
 
 .container main .button:hover {
-    background-color: var(--primary-hover);
+  background-color: var(--primary-hover);
 }
