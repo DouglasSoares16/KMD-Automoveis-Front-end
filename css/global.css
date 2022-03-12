@@ -29,6 +29,8 @@ body {
 
   font: 400 16px var(--family-inter);
   color: var(--text);
+
+  overflow-y: hidden;
 }
 
 .title {
