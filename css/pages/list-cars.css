@@ -33,7 +33,7 @@
 
 .cars main {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(3, 30%);
   justify-items: center;
   justify-content: center;
 
