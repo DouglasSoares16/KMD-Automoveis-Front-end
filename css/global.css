@@ -6,12 +6,9 @@
   --background-container: #F4F5F6;
   --background-card: #FFFFFF;
   --button-black: #29292E;
-
   --title: #47474D;
   --text: #7A7A80;
-
   --modal-overlay: #29292E;
-
   --family-archivo: 'Archivo', sans-serif;
   --family-inter: 'Inter', sans-serif;
 }
@@ -26,10 +23,8 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-
   font: 400 16px var(--family-inter);
   color: var(--text);
-
   overflow-y: hidden;
 }
 
@@ -64,4 +59,10 @@ a {
   width: 100%;
   height: 100%;
   display: flex;
+}
+
+@media (max-width: 1600px) {
+  .container .content .asidebar {
+    width: 72px;
+  }
 }
