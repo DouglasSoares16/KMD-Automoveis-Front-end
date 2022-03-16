@@ -1,3 +1,11 @@
+.container main {
+  margin-right: 200px;
+}
+
+.container .image {
+  margin-top: -20px
+}
+
 main .button {
   display: flex;
   flex-direction: column;
@@ -6,10 +14,23 @@ main .button {
 
 main .button button {
   margin-bottom: 16px;
+  transition: .6s;
 }
 
 main .button .register {
   background-color: var(--background-container);
   border: 1px solid #DEDEE3;
   color: #47474D;
+}
+
+main .button .register:hover {
+  color: #fff;
+}
+
+.wrapper-form {
+  justify-content: space-between;
+}
+
+form {
+  margin-bottom: 40px;
 }
