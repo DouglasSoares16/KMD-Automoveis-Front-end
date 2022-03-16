@@ -1,0 +1,33 @@
+body .container {
+    border-color: #ffff;
+}
+
+.container .wrapper-car {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container .wrapper-car main {
+    width: 384px;
+}
+
+.wrapper-car main .car-information {
+    display: grid;
+    grid-template-columns: repeat(2, 188px);
+    gap: 8px;
+}
+
+.car-information .info-block {
+    display: flex;
+    background-color: var(--background-container);
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-block .icon {
+    height: 100%;
+    border-right: 2px solid #ffff;
+}
