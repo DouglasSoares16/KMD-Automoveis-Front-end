@@ -1,33 +1,117 @@
 body .container {
-    border-color: #ffff;
+  border-color: #ffff;
+}
+
+.container header .header-content {
+  justify-content: initial;
+}
+
+
+.wrapper-title {
+  margin-left: 40px;
+}
+
+.wrapper-title > span {
+  font-family: var(--family-archivo);
+  font-size: 14px;
+  color: #AEAEB3;
+}
+
+.wrapper-title h3 {
+  font-family: var(--family-archivo);
+  font-size: 26px;
+  font-weight: 600;
+
+  color: var(--title);
+}
+
+.wrapper-title h3 span {
+  margin-left: 40px;
+  color: var(--primary-color);
 }
 
 .container .wrapper-car {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  border-top: 1px solid #eeeef3;
 }
 
 .container .wrapper-car main {
-    width: 384px;
+  width: 384px;
+  margin-top: -80px;
 }
 
 .wrapper-car main .car-information {
-    display: grid;
-    grid-template-columns: repeat(2, 188px);
-    gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 188px);
+  gap: 8px;
 }
 
 .car-information .info-block {
-    display: flex;
-    background-color: var(--background-container);
-    height: 64px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  background-color: var(--background-container);
+  height: 64px;
+  align-items: center;
 }
 
 .info-block .icon {
-    height: 100%;
-    border-right: 2px solid #ffff;
+  height: 100%;
+  border-right: 2px solid #ffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.icon img {
+  width: 30px;
+}
+
+.icon img.opc {
+  filter: brightness(0.5);
+}
+
+.info-block p {
+  margin-left: 10px;
+}
+
+.text h4 {
+  text-align: center;
+  border-bottom: 2px solid #800080;
+
+  width: 200px;
+
+  margin: 40px auto 20px
+}
+
+.text p {
+  line-height: 26px;
+}
+
+.wrapper-car main button {
+  background-color: var(--green-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 384px;
+  height: 60px;
+
+  border: none;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  margin: 80px auto 0;
+
+  transition: .2s;
+}
+
+.wrapper-car main button:hover {
+  background-color: #10904a;
 }
