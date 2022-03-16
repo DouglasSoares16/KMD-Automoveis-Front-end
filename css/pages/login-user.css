@@ -1,0 +1,15 @@
+main .button {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+main .button button {
+  margin-bottom: 16px;
+}
+
+main .button .register {
+  background-color: var(--background-container);
+  border: 1px solid #DEDEE3;
+  color: #47474D;
+}
