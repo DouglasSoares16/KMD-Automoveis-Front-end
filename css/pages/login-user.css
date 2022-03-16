@@ -1,9 +1,15 @@
 .container main {
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 .container .image {
   margin-top: -20px
+}
+
+.container .image img {
+  width: 600px;
+  margin-left: -50px;
+  margin-right: 60px;
 }
 
 main .button {
@@ -14,7 +20,7 @@ main .button {
 
 main .button button {
   margin-bottom: 16px;
-  transition: .6s;
+  transition: .3s;
 }
 
 main .button .register {
@@ -34,3 +40,7 @@ main .button .register:hover {
 form {
   margin-bottom: 40px;
 }
+/* 
+@media (max-width: 1366px) {
+  
+} */
