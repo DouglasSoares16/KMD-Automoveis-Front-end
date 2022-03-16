@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--background-container);
+}
+
+.wrapper-form {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  margin: 103px 160px;
+  justify-content: space-around;
+}
+
+.container main {
+  width: 384px;
+}
+
+main .text {
+  margin-bottom: 40px;
+}
+
+.container main .logo img {
+  margin-left: -80px;
+}
+
+.container main h2.title {
+  color: #41414D;
+  font-size: 44px;
+  margin-bottom: 20px;
+  line-height: 54px;
+}
+
+.container main p {
+  color: #7A7A80;
+  margin-bottom: 70px;
+  width: 331px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.container .image {
+  text-align: right;
+  width: 608px;
+}
+
+.container .image img {
+  margin-top: 36px;
+}

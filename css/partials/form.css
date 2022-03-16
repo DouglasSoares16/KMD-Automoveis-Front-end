@@ -1,0 +1,48 @@
+/* FORM */
+
+form {
+  margin-bottom: 96px;
+}
+
+.input-block {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 8px;
+  width: 384px;
+}
+
+.icon-input {
+  width: 71px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--background-container);
+}
+
+.input-block input {
+  height: 64px;
+  width: 311px;
+  border: none;
+  margin-left: 23px;
+  outline: none;
+}
+
+main .button {
+  width: 100%;
+}
+
+main button {
+  width: 384px;
+  height: 64px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.container main button:hover {
+  background-color: var(--primary-hover);
+}
