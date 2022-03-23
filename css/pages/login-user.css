@@ -18,19 +18,28 @@ main .button {
   height: auto;
 }
 
-main .button button {
+main .button button,
+main .button a {
   margin-bottom: 16px;
   transition: .3s;
 }
 
-main .button .register {
+main .button a.register {
   background-color: var(--background-container);
   border: 1px solid #DEDEE3;
   color: #47474D;
+  width: 384px;
+  height: 64px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-main .button .register:hover {
+main .button a.register:hover {
   color: #fff;
+  background: var(--primary-color);
 }
 
 .wrapper-form {
@@ -40,7 +49,5 @@ main .button .register:hover {
 form {
   margin-bottom: 40px;
 }
-/* 
-@media (max-width: 1366px) {
-  
-} */
+
+
