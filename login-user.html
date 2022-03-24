@@ -90,7 +90,7 @@
             </p>
           </div>
 
-          <form>
+          <form id="login-user" onsubmit="Form.loginUser(event)">
             <div class="input-block">
               <div class="icon-input">
                 <img src="./assets/icons/E-mail.svg" alt="Email">
@@ -109,7 +109,7 @@
           </form>
 
           <div class="button">
-            <button type="button">Login</button>
+            <button type="submit" form="login-user">Login</button>
 
             <a href="./create-user.html" class="register">Criar conta gratuita</a>
           </div>
@@ -118,5 +118,8 @@
     </div>
   </div>
 </body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/login-user/main.js"></script>
 
 </html>
