@@ -15,7 +15,6 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/global.css">
-  <link rel="stylesheet" href="./css/pages/create-user.css">
   <link rel="stylesheet" href="./css/partials/aside-header.css">
   <link rel="stylesheet" href="./css/partials/form.css">
   <link rel="stylesheet" href="./css/partials/layout-form.css">
@@ -85,7 +84,7 @@
             </p>
           </div>
 
-          <form>
+          <form id="create-user" onsubmit="Form.createUser(event)">
             <div class="input-block">
               <div class="icon-input">
                 <img src="./assets/icons/perfil.svg" alt="Perfil">
@@ -99,7 +98,7 @@
                 <img src="./assets/icons/E-mail.svg" alt="Email">
               </div>
 
-              <input name="name" id="name" type="text" placeholder="Email">
+              <input name="email" id="email" type="email" placeholder="Email">
             </div>
 
             <div class="input-block">
@@ -107,7 +106,7 @@
                 <img src="./assets/icons/car.svg" alt="Car">
               </div>
 
-              <input name="name" id="name" type="text" placeholder="CNH">
+              <input name="cnh" id="cnh" type="text" placeholder="CNH">
             </div>
 
             <div class="input-block">
@@ -115,12 +114,12 @@
                 <img src="./assets/icons/password.svg" alt="Password">
               </div>
 
-              <input name="name" id="name" type="text" placeholder="Senha">
+              <input name="password" id="password" type="password" placeholder="Senha">
             </div>
           </form>
 
           <div class="button">
-            <button type="button">Cadastrar</button>
+            <button type="submit" form="create-user">Cadastrar</button>
           </div>
         </main>
 
@@ -131,5 +130,8 @@
     </div>
   </div>
 </body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/create-user/main.js"></script>
 
 </html>
