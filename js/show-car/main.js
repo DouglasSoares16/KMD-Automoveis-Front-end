@@ -14,6 +14,10 @@ async function onLoad() {
     <h3>${car.name}<span>R$ ${car.price}</span></h3>
   `;
 
+  document.querySelector(".wrapper-car .image").innerHTML = `
+    <img src=${car.images[0]} alt="imagem de ${car.name}">
+  `;
+
   document.querySelector(".wrapper-car main").innerHTML = `
     <div class="car-information">
       <div class="info-block">

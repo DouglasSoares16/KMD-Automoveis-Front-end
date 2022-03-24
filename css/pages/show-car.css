@@ -11,7 +11,7 @@ body .container {
   margin-left: 40px;
 }
 
-.wrapper-title > span {
+.wrapper-title>span {
   font-family: var(--family-archivo);
   font-size: 14px;
   color: #AEAEB3;
@@ -37,6 +37,18 @@ body .container {
   width: 100%;
 
   border-top: 1px solid #eeeef3;
+}
+
+.container .wrapper-car .image {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-car .image img {
+  width: 100%;
+  margin-bottom: 70px;
 }
 
 .container .wrapper-car main {
