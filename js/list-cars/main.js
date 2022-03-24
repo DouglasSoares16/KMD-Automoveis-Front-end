@@ -7,7 +7,7 @@ async function onLoad() {
     document.getElementById("list").innerHTML += `
       <div class="car">
         <div class="car-content">
-          <a href="#">
+          <a href="./show-car.html?carId=${car.id}">
             <div class="car-image">
               <img src=${car.images === null ? "./assets/images/RS5Coupe.png" : car.images[0]} alt=${car.name}>
             </div>
