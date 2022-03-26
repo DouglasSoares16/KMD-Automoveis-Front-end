@@ -1,0 +1,130 @@
+
+.wrapper-perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.wrapper-perfil h4 {
+  width: 75px;
+  margin: 20px auto 20px;
+  border-bottom: 2px solid var(--primary-color);
+  text-align: center;
+}
+
+.content-user .wrapper-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-image img {
+  width: 250px;
+  border-radius: 50%
+}
+
+.wrapper-image img:first-child {
+  margin-left: 40px;
+}
+
+.wrapper-image .change-img {
+  position: relative;
+  width: 40px;
+  bottom: -90px;
+  left: -60px;
+
+  background-color: var(--primary-color);
+  border-radius: initial;
+  padding: 5px;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.wrapper-image .change-img:hover {
+  transform: scale(1.2);
+}
+
+.wrapper-data form {
+  margin-bottom: 20px;
+}
+
+.wrapper-data .button {
+  background-color: var(--primary-color);
+  width: 384px;
+  height: 64px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.wrapper-data .button:hover {
+  background-color: var(--primary-hover);
+}
+
+.wrapper-perfil .user-history {
+  height: 100%;
+  width: 40%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.user-history h2 {
+  margin: 20px 0 20px;
+}
+
+.user-history .wrapper-history {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 55px;
+  padding-bottom: 100px;
+}
+
+.user-history .car {
+  background: var(--background-card);
+  transition: .3s;
+}
+
+.user-history .car:hover {
+  transform: translateX(-20px);
+}
+
+.car:hover::before {
+  width: 0;
+}
+
+.car .car-content {
+  padding: 10px;
+}
+
+.car .car-content a {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.car-content .car-image img {
+  margin: 0 40px 0 0;
+}
+
+.car-content a .info {
+  width: 50%;
+}
+
+.info-content .group-info {
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+}
+
+.group-info .group-price {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.group-price span {
+  margin-right: 20px;
+}
