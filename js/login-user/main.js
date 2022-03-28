@@ -44,7 +44,7 @@ const Form = {
 
       window.localStorage.setItem("@kmd_auto:token", response.token);
 
-      window.location.href = "list-cars.html";
+      window.location.href = "perfil-user.html";
 
     } catch (error) {
       alert(error.message);
