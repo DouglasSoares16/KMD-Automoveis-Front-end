@@ -21,12 +21,17 @@ form {
   border-right: 2px solid var(--background-container);
 }
 
-.input-block input {
+.input-block input,
+.input-block select,
+.input-block textarea {
   height: 64px;
   width: 311px;
   border: none;
   margin-left: 23px;
   outline: none;
+
+  font-family: var(--family-inter);
+  font-size: 16px;
 }
 
 main .button {
