@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KMD | Cadastro de Carro</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/partials/aside-header.css">
+  <link rel="stylesheet" href="./css/partials/form.css">
+  <link rel="stylesheet" href="./css/partials/layout-form.css">
+  <link rel="stylesheet" href="./css/pages/create-car.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="box-purple">
+        <a href="./index.html">
+          <img src="./assets/icons/union.svg" alt="X">
+        </a>
+      </div>
+
+      <div class="header-content">
+        <h3 class="title-page">
+          Cadastro
+        </h3>
+
+        <div class="box-login">
+          <p>
+            <a href="./login-user.html">
+              Faça Login
+            </a>
+          </p>
+
+          <div class="user">
+            <img src="./assets/icons/perfil.svg" alt="Photo">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <aside class="asidebar">
+        <div class="asidebar-content">
+          <div class="block">
+            <span class="line"></span>
+
+            <div class="home">
+              <a href="./list-cars.html">
+                <img src="./assets/icons/home.svg" alt="Home">
+              </a>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="profile">
+              <a href="#">
+                <img src="./assets/icons/perfil.svg" alt="profile">
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="wrapper-form">
+        <main>
+          <div class="text">
+            <h2 class="title">
+              Cadastre um carro
+            </h2>
+
+            <p>
+              Faça o cadastro de um carro de forma rápida e fácil.
+            </p>
+          </div>
+
+          <form id="create-car" onsubmit="Form">
+
+            <!-- Stage 1 -->
+
+            <div class="input-block">
+              <input name="name" id="name" type="text" placeholder="Nome">
+            </div>
+
+            <div class="input-block">
+              <select name="brand" id="brand">
+                <option value="">Selecione uma Marca</option>
+                <option value="id_1">Fiat</option>
+                <option value="id_2">Jeep</option>
+                <option value="id_3">BMW</option>
+                <option value="id_4">Audi</option>
+              </select>
+            </div>
+
+            <div class="input-block">
+              <select name="fuel" id="fuel">
+                <option value="">Selecione um tipo de combustível</option>
+                <option value="id_1">Gasolina</option>
+                <option value="id_2">Elétrico</option>
+                <option value="id_3">Álcool</option>
+              </select>
+            </div>
+
+            <div class="input-block">
+              <select name="transmission" id="transmission">
+                <option value="">Selecione um tipo de transmissão</option>
+                <option value="id_1">Manual</option>
+                <option value="id_2">Automático</option>
+              </select>
+            </div>
+
+            <div class="input-block">
+              <select name="category" id="category">
+                <option value="">Selecione uma categoria</option>
+                <option value="id_1">SUV</option>
+                <option value="id_2">Hatch</option>
+                <option value="id_3">Picape</option>
+                <option value="id_4">Familiar</option>
+              </select>
+            </div>
+
+
+            <!-- 
+              Stage 2
+
+              <div class="input-block">
+                <input name="speed" id="speed" type="text" placeholder="Velocidade Máxima (KM/H)">
+              </div>
+
+              <div class="input-block">
+                <input name="amount_people" id="amount_people" type="number" placeholder="Quantidade de pessoas">
+              </div>
+
+              <div class="input-block">
+                <input name="horse_power" id="horse_power" type="number" placeholder="Caválos de Força">
+              </div>
+
+              <div class="input-block">
+                <input name="acceleration" id="acceleration" type="text" placeholder="Aceleração (Tempo de 0 a 100km/h)">
+              </div>
+
+              <div class="input-block">
+                <input name="price" id="price" type="number" step="100" placeholder="Preço (R$)">
+              </div>
+             -->
+
+            <!-- 
+              Stage 3
+
+              <div class="input-block">
+                <input name="amount_in_storage" id="amount_in_storage" type="number"  step="10" placeholder="Quantidade em Estoque">
+              </div>
+
+              <div class="input-block">
+                <textarea name="description" id="description" placeholder="Descrição do Carro"></textarea>
+              </div>
+             -->
+            <!-- 
+              Stage 4
+
+              <button type="button" class="new-file">
+                <img src="./assets/icons/plus.svg" alt="+">
+              </button>
+
+              <div class="input-block">
+                <div class="icon-input">
+                  <img src="./assets/icons/up.svg" alt="UP">
+                </div>
+
+                <label for="image_main">Imagem principal do Carro</label>
+                <input name="image_main" id="image_main" type="file">
+              </div>
+
+              <div class="input-block">
+                <div class="icon-input">
+                  <img src="./assets/icons/up.svg" alt="UP">
+                </div>
+
+                <label for="image_2">Selecionar uma imagem</label>
+                <input name="image_2" id="image_2" type="file">
+              </div> 
+            -->
+
+          </form>
+
+          <div class="button space-up">
+            <button type="button">Próximo</button>
+          </div>
+
+          <p class="stage">1 de 4</p>
+        </main>
+
+        <div class="image">
+          <img src="./assets/images/car-create-account.png" alt="imagem de carro">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

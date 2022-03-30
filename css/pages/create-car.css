@@ -1,0 +1,65 @@
+main form {
+  margin-bottom: 30px;
+}
+
+.input-block input,
+.input-block select,
+.input-block textarea {
+  width: 100%;
+}
+
+.input-block input[type=file] {
+  display: none;
+}
+
+.input-block textarea {
+  height: 300px;
+  border: none;
+  outline-color: var(--primary-color);
+  padding: 22px;
+  margin: 0;
+}
+
+/* ::-webkit-file-upload-button {
+  background: var(--background-container);
+  color: var(--text);
+  padding: 10px;
+} */
+label {
+  /* background-color: rgba(149, 18, 149, 0.838); */
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  margin: 10px;
+  padding: 6px 20px
+}
+
+main p.stage {
+  margin: 30px auto 0;
+  color: var(--text);
+  width: fit-content;
+  font-size: 15px;
+}
+
+.button.space-up {
+  margin-top: 60px;
+}
+
+main #create-car .new-file {
+  background-color: var(--primary-color);
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  float: right;
+
+  margin-bottom: 20px;
+}
+
+.new-file:hover {
+  transform: translateY(-7px);
+}
