@@ -2,6 +2,8 @@ const baseURL = "http://localhost:5500";
 let car = {};
 let car_id;
 
+const formData = new FormData();
+
 async function onLoad() {
   const token = window.localStorage.getItem("@kmd_auto:token");
 
@@ -73,10 +75,10 @@ const stageOne = {
 
   clearFields() {
     stageOne.name.value = "",
-      stageOne.brand_id.value = "",
-      stageOne.fuel_id.value = "",
-      stageOne.transmission_id.value = "",
-      stageOne.category_id.value = ""
+    stageOne.brand_id.value = "",
+    stageOne.fuel_id.value = "",
+    stageOne.transmission_id.value = "",
+    stageOne.category_id.value = ""
   },
 
   changedToStage2() {
@@ -214,7 +216,7 @@ const stageThree = {
         </p>
       </div>
     
-      <form enctype="multipart/form-data" id="create-car">
+      <form id="create-car">
         <button type="button" class="new-file">
           <img src="./assets/icons/plus.svg" alt="+">
         </button>
@@ -234,12 +236,12 @@ const stageThree = {
           </div>
 
           <label for="images">Selecionar uma imagem</label>
-          <input name="images" id="images" type="file">
+          <input name="image_two" id="image_two" type="file">
         </div>
       </form>
 
       <div class="button space-up">
-        <button type="button" onclick="">Cadastrar</button>
+        <button type="button" onclick="stageFour.exec()">Cadastrar</button>
       </div>
     `;
   },
@@ -257,6 +259,27 @@ const stageThree = {
       axios.post(`${baseURL}/car`, car).then((response) => car_id = response.data.id);
 
       stageThree.changedToStage4();
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+};
+
+const stageFour = {
+  exec() {
+    try {
+      const fileOne = document.querySelector("input#image_main");
+      const fileTwo = document.querySelector("input#image_two");
+
+      formData.append("images", fileOne.files[0], fileTwo.files[0]);
+
+      axios.post(`http://localhost:5500/car/${car_id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        }
+      }).then(() => {
+        window.location.href = "list-cars.html";
+      });
     } catch (error) {
       alert(error.message);
     }
