@@ -42,6 +42,12 @@ const Form = {
 
       Form.clearFields();
 
+      const tokenExists = window.localStorage.getItem("@kmd_auto:token");
+
+      if (tokenExists) {
+        window.localStorage.removeItem("@kmd_auto:token");
+      }
+
       window.localStorage.setItem("@kmd_auto:token", response.token);
 
       window.location.href = "perfil-user.html";
