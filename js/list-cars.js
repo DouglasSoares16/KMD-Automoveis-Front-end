@@ -3,6 +3,10 @@ const baseURL = "http://localhost:5500";
 async function onLoad() {
   const cars = await getRequest("car");
 
+  const amountCars = cars.length;
+
+  document.querySelector(".cars .header-content p").innerHTML = `Total ${amountCars} carros`;
+
   cars.forEach((car) => {
     document.getElementById("list").innerHTML += `
       <div class="car">
