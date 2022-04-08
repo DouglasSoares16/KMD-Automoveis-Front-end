@@ -82,13 +82,14 @@
 
 .car-content .car-image img {
   width: 100%;
-  height: 132px;
+  height: 157px;
   max-width: 288px;
+  object-fit: contain;
 }
 
 .car-content .car-image img,
 .info {
-  margin: 20px;
+  margin: 13px;
 }
 
 .info>span {
