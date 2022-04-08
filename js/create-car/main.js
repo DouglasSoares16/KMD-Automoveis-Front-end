@@ -176,8 +176,6 @@ const stageTwo = {
 
       car = { ...data, ...car };
 
-      console.log(car);
-
       stageTwo.changedToStage3();
     } catch (error) {
       alert(error.message);
@@ -253,8 +251,6 @@ const stageThree = {
       const data = stageThree.getValues();
 
       car = { ...data, ...car };
-
-      console.log(car);
 
       axios.post(`${baseURL}/car`, car).then((response) => car_id = response.data.id);
 

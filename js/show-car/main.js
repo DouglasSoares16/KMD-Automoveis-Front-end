@@ -7,8 +7,6 @@ async function onLoad() {
 
   const car = await getRequest(`car/${carID}`);
 
-  console.log(car)
-
   document.querySelector(".wrapper-title").innerHTML = `
     <span>${car.brand.name}</span>
     <h3>${car.name}<span>R$ ${car.price}</span></h3>

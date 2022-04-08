@@ -8,8 +8,6 @@ async function onLoad() {
 	try {
 		const response = await axios.get("http://localhost:5500/user/profile");
 
-		console.log(response.data);
-
 		document.querySelector(".wrapper-image").innerHTML = `
 			<img src="./assets/icons/perfil.svg" alt=${response.data.user.name}>
 			<img src="./assets/icons/changed-photo.svg" alt="Alterar" class="change-img">
@@ -92,11 +90,7 @@ const Form = {
 
 			const data = Form.getValues();
 
-			console.log(data);
-
 			// await postRequest("user/session", data);
-
-			// Form.clearFields();
 
 			window.location.href = "perfil-user.html";
 		} catch (error) {
