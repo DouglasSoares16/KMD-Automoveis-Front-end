@@ -235,7 +235,7 @@ const stageThree = {
             <img src="./assets/icons/up.svg" alt="UP">
           </div>
 
-          <label for="images">Selecionar uma imagem</label>
+          <label for="image_two">Selecionar uma imagem</label>
           <input name="image_two" id="image_two" type="file">
         </div>
       </form>
@@ -271,7 +271,8 @@ const stageFour = {
       const fileOne = document.querySelector("input#image_main");
       const fileTwo = document.querySelector("input#image_two");
 
-      formData.append("images", fileOne.files[0], fileTwo.files[0]);
+      formData.append("images", fileOne.files[0]);
+      formData.append("images", fileTwo.files[0]);
 
       axios.post(`http://localhost:5500/car/${car_id}`, formData, {
         headers: {
