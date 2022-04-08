@@ -50,10 +50,24 @@ const Form = {
 
       await postRequest("user", data);
 
+      const login = {
+        email: Form.email.value,
+        password: Form.password.value,
+      };
+
+      const response = await postRequest("user/session", login);
+
       Form.clearFields();
 
-      window.location.href = "list-cars.html";
+      const tokenExists = window.localStorage.getItem("@kmd_auto:token");
 
+      if (tokenExists) {
+        window.localStorage.removeItem("@kmd_auto:token");
+      }
+
+      window.localStorage.setItem("@kmd_auto:token", response.token);
+
+      window.location.href = "list-cars.html";
     } catch (error) {
       alert(error.message);
     }
