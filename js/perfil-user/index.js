@@ -19,7 +19,7 @@ async function onLoad() {
 					<img src="./assets/icons/perfil.svg" alt="Perfil">
 				</div>
 
-				<input name="name" id="name" type="text" placeholder=${response.data.user.name}>
+				<input name="name" id="name" type="text" value=${response.data.user.name}>
 			</div>
 
 			<div class="input-block">
@@ -27,7 +27,7 @@ async function onLoad() {
 					<img src="./assets/icons/E-mail.svg" alt="Email">
 				</div>
 
-				<input name="email" id="email" type="email" placeholder=${response.data.user.email}>
+				<input name="email" id="email" type="email" value=${response.data.user.email}>
 			</div>
 
 			<div class="input-block">
@@ -35,7 +35,7 @@ async function onLoad() {
 					<img src="./assets/icons/car.svg" alt="Car">
 				</div>
 
-				<input name="cnh" id="cnh" type="text" placeholder=${response.data.user.cnh}>
+				<input name="cnh" id="cnh" type="text" value=${response.data.user.cnh}>
 			</div>
 		`;
 
@@ -52,20 +52,16 @@ async function onLoad() {
 }
 
 const Form = {
-	name: document.querySelector("input#name"),
-	email: document.querySelector("input#email"),
-	cnh: document.querySelector("input#cnh"),
-
 	getValues() {
 		return {
-			name: Form.name.value,
-			email: Form.email.value,
-			cnh: Form.cnh.value,
+			name: document.querySelector("input#name").value,
+			email: document.querySelector("input#email").value,
+			cnh: document.querySelector("input#cnh").value,
 		}
 	},
 
 	validateFields() {
-		const { email, cnh, name} = Form.getValues();
+		const { email, cnh, name } = Form.getValues();
 
 		if (
 			name.trim() === "" ||
@@ -76,12 +72,6 @@ const Form = {
 		}
 	},
 
-	clearFields() {
-		Form.name.value = "";
-		Form.email.value = "";
-		Form.cnh.value = "";
-	},
-
 	async updateUser(event) {
 		event.preventDefault();
 
@@ -90,7 +80,7 @@ const Form = {
 
 			const data = Form.getValues();
 
-			// await postRequest("user/session", data);
+			await axios.put("http://localhost:5500/user", data);
 
 			window.location.href = "perfil-user.html";
 		} catch (error) {
