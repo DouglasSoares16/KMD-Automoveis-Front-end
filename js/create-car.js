@@ -1,6 +1,7 @@
 const baseURL = "http://localhost:5500";
 let car = {};
 let car_id;
+let stageNumber = 1;
 
 const formData = new FormData();
 
@@ -82,6 +83,8 @@ const stageOne = {
   },
 
   changedToStage2() {
+    stageNumber++;
+
     document.querySelector("form#create-car").innerHTML = `
       <div class="input-block">
         <input name="speed" id="speed" type="text" placeholder="Velocidade Máxima (KM/H)">
@@ -107,6 +110,8 @@ const stageOne = {
     document.querySelector("div.button").innerHTML = `
       <button type="button" onclick="stageTwo.exec()">Próximo</button>
     `;
+
+    document.querySelector("p.stage").innerHTML = `${stageNumber} de 4`;
   },
 
   exec() {
@@ -153,6 +158,8 @@ const stageTwo = {
   },
 
   changedToStage3() {
+    stageNumber++;
+
     document.querySelector("form#create-car").innerHTML = `
       <div class="input-block">
         <input name="amount_in_storage" id="amount_in_storage" type="number"  step="10" placeholder="Quantidade em Estoque">
@@ -166,6 +173,8 @@ const stageTwo = {
     document.querySelector("div.button").innerHTML = `
       <button type="button" onclick="stageThree.exec()">Próximo</button>
     `;
+
+    document.querySelector("p.stage").innerHTML = `${stageNumber} de 4`;
   },
 
   exec() {
@@ -203,6 +212,8 @@ const stageThree = {
   },
 
   changedToStage4() {
+    stageNumber++;
+
     document.querySelector(".wrapper-form main").innerHTML = `
       <div class="text">
         <h2 class="title">
@@ -241,7 +252,11 @@ const stageThree = {
       <div class="button space-up">
         <button type="button" onclick="stageFour.exec()">Cadastrar</button>
       </div>
+
+      <p class="stage"></p>
     `;
+
+    document.querySelector("p.stage").innerHTML = `${stageNumber} de 4`;
   },
 
   exec() {
