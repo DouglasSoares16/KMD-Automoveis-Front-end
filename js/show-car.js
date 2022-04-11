@@ -1,9 +1,12 @@
 const baseURL = "http://localhost:5500";
+let car_id;
 
 async function onLoad() {
   const url = window.location.href;
 
   const [, carID] = url.split("?carId=");
+
+  car_id = carID;
 
   const car = await getRequest(`car/${carID}`);
 
@@ -13,7 +16,7 @@ async function onLoad() {
   `;
 
   document.querySelector(".wrapper-car .image").innerHTML = `
-    <img src=${car.images[0]} alt="imagem de ${car.name}">
+    <img src=${car.images === null ? "./assets/images/RS5Coupe.png" : car.images[0]} alt="imagem de ${car.name}">
   `;
 
   document.querySelector(".wrapper-car main").innerHTML = `
@@ -73,8 +76,24 @@ async function onLoad() {
       <p>${car.description}</p>
     </div>
 
-    <button type="button">Comprar carro</button>
+    <button type="button" onclick="buyCar()">Comprar carro</button>
   `;
+}
+
+async function buyCar() {
+  const token = window.localStorage.getItem("@kmd_auto:token");
+
+  try {
+    axios.defaults.headers.common.authorization = `Bearer ${token}`;
+
+    await axios.post(baseURL + "/user/buy", { car_id });
+
+    window.location.href = "car-bought.html";
+  } catch (error) {
+    const { data } = error.response;
+
+    alert(data.message);
+  }
 }
 
 async function getRequest(url) {
