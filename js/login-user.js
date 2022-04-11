@@ -53,7 +53,9 @@ const Form = {
       window.location.href = "perfil-user.html";
 
     } catch (error) {
-      alert(error.message);
+      const { data } = error.response;
+
+      alert(data.message);
     }
   },
 };

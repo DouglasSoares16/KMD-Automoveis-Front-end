@@ -75,16 +75,18 @@ const Form = {
 	async updateUser(event) {
 		event.preventDefault();
 
-		try {
-			Form.validateFields();
+		Form.validateFields();
 
+		try {
 			const data = Form.getValues();
 
 			await axios.put("http://localhost:5500/user", data);
 
 			window.location.href = "perfil-user.html";
 		} catch (error) {
-			alert(error.message);
+			const { data } = error.response;
+
+      alert(data.message);
 		}
 	},
 };

@@ -126,7 +126,9 @@ const stageOne = {
 
       stageOne.changedToStage2();
     } catch (error) {
-      alert(error.message);
+      const { data } = error.response;
+
+      alert(data.message);
     }
   },
 };
@@ -187,7 +189,9 @@ const stageTwo = {
 
       stageTwo.changedToStage3();
     } catch (error) {
-      alert(error.message);
+      const { data } = error.response;
+
+      alert(data.message);
     }
   }
 };
@@ -271,7 +275,9 @@ const stageThree = {
 
       stageThree.changedToStage4();
     } catch (error) {
-      alert(error.message);
+      const { data } = error.response;
+
+      alert(data.message);
     }
   }
 };
@@ -293,7 +299,9 @@ const stageFour = {
         window.location.href = "list-cars.html";
       });
     } catch (error) {
-      alert(error.message);
+      const { data } = error.response;
+
+      alert(data.message);
     }
   }
 };

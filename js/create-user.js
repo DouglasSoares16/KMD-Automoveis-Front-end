@@ -69,7 +69,9 @@ const Form = {
 
       window.location.href = "list-cars.html";
     } catch (error) {
-      alert(error.message);
+      const { data } = error.response;
+
+      alert(data.message);
     }
   },
 };

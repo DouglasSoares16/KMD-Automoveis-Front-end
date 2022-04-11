@@ -34,8 +34,6 @@ async function isLogged() {
     `;
 
   } catch (error) {
-    console.error(error.message);
-
     boxLogin.innerHTML = `
       <p>
         <a href="./login-user.html">
