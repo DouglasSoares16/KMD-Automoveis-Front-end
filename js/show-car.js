@@ -92,7 +92,11 @@ async function buyCar() {
   } catch (error) {
     const { data } = error.response;
 
-    alert(data.message);
+    swal({
+      title: "Error",
+      text: data.message,
+      icon: "error"
+    });
   }
 }
 

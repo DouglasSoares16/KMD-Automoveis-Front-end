@@ -70,16 +70,20 @@ const stageOne = {
       transmission_id.trim() === "" ||
       category_id.trim() === ""
     ) {
-      throw new Error("Preencha todos os campos")
+      swal({
+        title: "Error",
+        text: "Preencha todos os campos",
+        icon: "error"
+      });
     }
   },
 
   clearFields() {
     stageOne.name.value = "",
-    stageOne.brand_id.value = "",
-    stageOne.fuel_id.value = "",
-    stageOne.transmission_id.value = "",
-    stageOne.category_id.value = ""
+      stageOne.brand_id.value = "",
+      stageOne.fuel_id.value = "",
+      stageOne.transmission_id.value = "",
+      stageOne.category_id.value = ""
   },
 
   changedToStage2() {
@@ -128,7 +132,11 @@ const stageOne = {
     } catch (error) {
       const { data } = error.response;
 
-      alert(data.message);
+      swal({
+        title: "Error",
+        text: data.message,
+        icon: "error"
+      });
     }
   },
 };
@@ -155,7 +163,11 @@ const stageTwo = {
       acceleration.trim() === "" ||
       price.trim() === ""
     ) {
-      throw new Error("Preencha todos os campos")
+      swal({
+        title: "Error",
+        text: "Preencha todos os campos",
+        icon: "error"
+      });
     }
   },
 
@@ -191,7 +203,11 @@ const stageTwo = {
     } catch (error) {
       const { data } = error.response;
 
-      alert(data.message);
+      swal({
+        title: "Error",
+        text: data.message,
+        icon: "error"
+      });
     }
   }
 };
@@ -211,7 +227,11 @@ const stageThree = {
       amount_in_storage.trim() === "" ||
       description.trim() === ""
     ) {
-      throw new Error("Preencha todos os campos")
+      swal({
+        title: "Error",
+        text: "Preencha todos os campos",
+        icon: "error"
+      });
     }
   },
 
@@ -277,7 +297,11 @@ const stageThree = {
     } catch (error) {
       const { data } = error.response;
 
-      alert(data.message);
+      swal({
+        title: "Error",
+        text: data.message,
+        icon: "error"
+      });
     }
   }
 };
@@ -301,7 +325,11 @@ const stageFour = {
     } catch (error) {
       const { data } = error.response;
 
-      alert(data.message);
+      swal({
+        title: "Error",
+        text: data.message,
+        icon: "error"
+      });
     }
   }
 };

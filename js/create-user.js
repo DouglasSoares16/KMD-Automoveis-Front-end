@@ -24,7 +24,11 @@ const Form = {
       cnh.trim() === "" ||
       password.trim() === ""
     ) {
-      throw new Error("Preencha todos os campos")
+      swal({
+        title: "Error",
+        text: "Preencha todos os dados",
+        icon: "error"
+      });
     }
   },
 
@@ -71,7 +75,11 @@ const Form = {
     } catch (error) {
       const { data } = error.response;
 
-      alert(data.message);
+      swal({
+        title: "Error",
+        text: data.message,
+        icon: "error"
+      });
     }
   },
 };
