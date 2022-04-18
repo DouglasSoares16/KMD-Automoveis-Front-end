@@ -90,12 +90,20 @@ async function buyCar() {
 
     window.location.href = "car-bought.html";
   } catch (error) {
-    const { data } = error.response;
+    let link = document.createElement("a");
+    link.href = "./login-user.html"
+    link.innerText = "Ok";
+    link.style.backgroundColor = "green";
+    link.style.fontSize = "19px";
+    link.style.color = "white";
+    link.style.padding = "5px 10px 5px";
 
     swal({
       title: "Error",
-      text: data.message,
-      icon: "error"
+      text: "O Usuário deve estar logado para comprar algum carro.",
+      icon: "error",
+      buttons: false,
+      content: link,
     });
   }
 }
