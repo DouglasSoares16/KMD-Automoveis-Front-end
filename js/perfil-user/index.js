@@ -127,3 +127,9 @@ const Form = {
 };
 
 onLoad().then();
+
+function logout() {
+  window.localStorage.removeItem("@kmd_auto:token");
+
+  window.location.href = "list-cars.html";
+}
